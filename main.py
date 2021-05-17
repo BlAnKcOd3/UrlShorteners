@@ -1,6 +1,8 @@
 import pyshorteners
 import time
 
+#Note that you need to get an api key for bit.ly, tiny.cc, and short.cm/io
+
 print("Welcome to Url Shortener Central!")
 time.sleep(1)
 question = int(input("What url shortener source would you like to use?(tinyurl(1), bit.ly(2), tiny.cc(not working)(3), short.cm/io(not working)(4), or none): "))
@@ -21,7 +23,7 @@ if question == 1:
     print("The short url is ", s.tinyurl.short(url))
 elif question == 2:
     url = input("Please paste in the url that you want to shorten: ")
-    s = pyshorteners.Shortener(api_key = '3b7e5408a2c13a987d08976c94a5940186a9e75a')
+    s = pyshorteners.Shortener(api_key = 'YOUR_KEY')
     time.sleep(1)
     print("The url is being processed.")
     print("The shortened url will be given in 3 seconds.")
@@ -35,7 +37,7 @@ elif question == 2:
     print("The short url is ", s.bitly.short(url))
 elif question == 3:
     url = input("Please paste in the url that you want to shorten: ")
-    s = pyshorteners.Shortener(api_key = 'f61008c7-0d5a-4bb6-9ef3-fd693bb49c39', login = 'BlankySpacey')
+    s = pyshorteners.Shortener(api_key = 'YOUR_KEY', login = 'YOUR_USER')
     time.sleep(1)
     print("The url is being processed.")
     print("The shortened url will be given in 3 seconds.")
@@ -51,7 +53,7 @@ elif question == 3:
     print("The short url is ", s.tinycc.short(url))
 elif question == 4:
     url = input("Please paste in the url that you want to shorten: ")
-    s = pyshorteners.Shortener(api_key = 'YVYgPBoX3fezFonWg7EcSn4gncxvwUDq')
+    s = pyshorteners.Shortener(api_key = 'YOUR_KEY')
     time.sleep(1)
     print("The url is being processed.")
     print("The shortened url will be given in 3 seconds.")
